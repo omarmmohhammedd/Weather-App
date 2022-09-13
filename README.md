@@ -3,8 +3,8 @@
 
 ## Desgin
 <p align="center">
-<img src="./src/assest/Design.png" width="45%"/>
-<img src="./src/assest/Design-mop.png"width="45%"/>
+<img src="./src/assest/Design/Design1.png" width="45%"/>
+<img src="./src/assest/Design/Design2.png"width="45%"/>
 <p/>
 
 ### Features
