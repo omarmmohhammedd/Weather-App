@@ -1,0 +1,594 @@
+:root {
+    ---sunny-color: white;
+    ---cloudy-color: blue;
+}
+
+.Container {
+    background-image: linear-gradient(360deg, #d7bdc6, #5b8ce9);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Warpper {
+    width: 900px;
+    height: 800px;
+    background-color: #5b8ce9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.Input_con {
+    opacity: 0.7;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 1px 10px 0px black;
+    outline: white;
+    color: #5a5a5a;
+    position: relative;
+}
+
+
+#in_Location {
+    opacity: 0.5;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: white;
+    width: 80%;
+    color: #5a5a5a;
+
+}
+
+.Input_con svg {
+    width: 20%;
+    color: white;
+    cursor: pointer;
+}
+
+.error {
+    position: absolute;
+    color: #bf0000;
+    right: -70%;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.Wrapper-Data {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.Wrapper-Data .city-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    margin-left: 50px;
+}
+
+.Wrapper-Data .city-info .city-name {
+    color: var(---sunny-color);
+    display: inline;
+    font-size: 55px;
+
+}
+
+.Wrapper-Data .city-info .time-zone {
+
+    align-self: flex-start;
+}
+
+.Wrapper-Data .city-info .time-zone span {
+    color: var(---sunny-color);
+    margin: 0px 2px;
+}
+
+.Wrapper-Data .city-info .weather-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.Wrapper-Data .city-info .weather-state img {
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Wrapper-Data .city-info .weather-state span {
+    font-size: 40px;
+    color: var(---sunny-color);
+}
+
+.Wrapper-Data .temp {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 100px;
+}
+
+.Wrapper-Data .temp .current-temp {
+    font-size: 100px;
+    color: var(---sunny-color);
+}
+
+.Wrapper-Data .temp .sub-temp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Wrapper-Data .temp .sub-temp span {
+    color: var(---sunny-color);
+    font-size: 50px;
+    margin: 0px 10px;
+}
+
+.Choices {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px 0px;
+    padding: 0px 50px;
+
+}
+
+.Choices span {
+    color: #0000004a;
+    cursor: pointer;
+    font-size: 25px;
+    padding-bottom: 5px;
+    margin: 0px 20px;
+}
+
+.Choices .active_menu {
+    color: white;
+    position: relative;
+    border-bottom: 1px solid white;
+    animation: move 0.1s ease-in;
+}
+
+.Choices .drop-menu {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 150px;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+
+.week-weather-info {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    display: none;
+}
+
+.week-weather-info .day-temp {
+    width: calc(70%/4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 10px;
+    box-shadow: 0 0 8px 0px #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff1a;
+}
+
+.day-temp .day {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.day-temp-img img {
+    width: 100px;
+    height: 100px;
+}
+
+.day-temp .day-t {
+    color: white;
+    font-size: 25px;
+    margin: 10px 0px;
+}
+
+#active_info {
+    display: flex;
+}
+
+.day-weather-info {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    display: none;
+}
+
+.day-weather-info .day-temp {
+    width: calc(70%/4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 10px;
+    box-shadow: 0 0 8px 0px #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff1a;
+}
+
+.day-temp .time {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.day-temp .time-temp {
+    color: white;
+    font-size: 25px;
+    margin: 10px 0px;
+}
+
+.Details {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Details div {
+    width: calc(90% / 5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    box-shadow: 0 0 8px 0px #ffffff;
+    border-radius: 10px;
+
+}
+
+.Details div span {
+    color: white;
+    font-size: 27px;
+    margin: 5px 0px;
+    overflow-wrap: normal;
+    padding: 10px 5px;
+}
+
+.Details img {
+    width: 70px;
+    height: 70px;
+}
+
+
+
+
+@keyframes move {
+    0% {
+        border: 0px;
+    }
+
+    100% {
+        border-bottom: 1px solid white;
+        transform: scale(1.1);
+
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .Warpper {
+        width: 700px;
+        height: 600px;
+    }
+
+
+    .Wrapper-Data .city-info .city-name {
+        font-size: 35px;
+    }
+
+    .Wrapper-Data .time-zone span {
+        font-size: 13px;
+    }
+
+    .Wrapper-Data .city-info .weather-state img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .Wrapper-Data .city-info .weather-state span {
+        font-size: 30px;
+    }
+
+    .Wrapper-Data .temp .current-temp {
+        font-size: 60px;
+    }
+
+    .Choices {
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    .day-weather-info .day-temp .time {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    .day-weather-info .day-temp .day-temp-img img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .day-weather-info .day-temp .time-temp {
+        font-size: 20px;
+    }
+
+    .week-weather-info .day-temp .day {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    .week-weather-info .day-temp .day-temp-img img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .week-weather-info .day-temp .day-t {
+        font-size: 20px;
+    }
+
+    .Details div span {
+        font-size: 19px;
+        margin: 10px 0px;
+        padding: 0px;
+    }
+
+    .Details div img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+}
+
+@media screen and (max-width:700px) {
+    .Warpper {
+        width: 90%;
+        height: 500px;
+    }
+
+    .Input_con {
+        opacity: 0.7;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0px 1px 10px 0px black;
+        outline: white;
+        color: #5a5a5a;
+        position: relative;
+        justify-self: start;
+    }
+
+    .error {
+        position: absolute;
+        color: #bf0000;
+        right: -40%;
+        bottom: -100;
+        font-size: 12px;
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+
+    .Wrapper-Data .city-info {
+        margin-left: 20px;
+    }
+
+    .Wrapper-Data .city-info .city-name {
+        font-size: 25px;
+    }
+
+    .Wrapper-Data .time-zone span {
+        font-size: 11px;
+    }
+
+    .Wrapper-Data .city-info .weather-state img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .Wrapper-Data .city-info .weather-state span {
+        font-size: 20px;
+    }
+
+    .Wrapper-Data .temp {
+        margin-right: 30px;
+    }
+
+    .Wrapper-Data .temp .current-temp {
+        font-size: 50px;
+    }
+
+    .Choices {
+        margin: 0px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .Choices span {
+        font-size: 20px;
+    }
+
+    .day-weather-info .day-temp .time {
+        font-size: 15px;
+        margin: 5px 0px;
+    }
+
+    .day-weather-info .day-temp .day-temp-img img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .day-weather-info .day-temp .time-temp {
+        font-size: 15px;
+    }
+
+    .week-weather-info .day-temp .day {
+        font-size: 15px;
+        margin: 5px 0px;
+    }
+
+    .week-weather-info .day-temp .day-temp-img img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .week-weather-info .day-temp .day-t {
+        font-size: 15px;
+    }
+
+    .Details div span {
+        font-size: 15px;
+        margin: 10px 0px;
+        padding: 0px;
+    }
+
+    .Details div img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .Details div span:last-child {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    .Input_con {
+        opacity: 0.7;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0px 1px 10px 0px black;
+        outline: white;
+        color: #5a5a5a;
+        position: relative;
+        align-self: start;
+        width: 200px;
+        margin-left: 10px;
+    }
+
+    .error {
+        position: absolute;
+        color: #bf0000;
+        right: -55%;
+        bottom: -100;
+        font-size: 12px;
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+
+    .Wrapper-Data .city-info .city-name {
+        font-size: 30px;
+    }
+
+    .Wrapper-Data .time-zone span {
+        font-size: 9px;
+    }
+
+    .Wrapper-Data .temp {
+        margin-right: 30px;
+    }
+
+    .Wrapper-Data .temp .current-temp {
+        font-size: 45px;
+    }
+
+    .day-weather-info .day-temp {
+        width: calc((95%-30px)/5);
+        margin: 0px 5px;
+    }
+
+    .day-weather-info .day-temp .time {
+        font-size: 13px;
+        margin: 5px 0px;
+    }
+
+    .day-weather-info .day-temp .day-temp-img img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .day-weather-info .day-temp .time-temp {
+        font-size: 13px;
+    }
+
+    .week-weather-info .day-temp {
+        width: calc((95%-30px)/5);
+        margin: 0px 5px;
+    }
+
+    .week-weather-info .day-temp .day {
+        font-size: 12px;
+        margin: 5px 0px;
+    }
+
+    .week-weather-info .day-temp .day-temp-img img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .week-weather-info .day-temp .day-t {
+        font-size: 13px;
+    }
+
+    .Details div {
+        width: calc((95%-30px)/5);
+        margin: 0px 5px;
+    }
+
+    .Details div span {
+        font-size: 12px;
+        margin: 10px 0px;
+        padding: 0px;
+    }
+
+    .Details div img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .Details div span:last-child {
+        font-size: 9px;
+    }
+}
